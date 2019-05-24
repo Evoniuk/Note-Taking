@@ -1,0 +1,134 @@
+:root{
+  --main: #333;
+  --accent: powderblue ;
+  --active: teal;
+  --aside: grey;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+nav {
+  background-color: var(--main);
+  border-bottom: 4px solid var(--accent);
+}
+
+#bar {
+  margin: auto;
+  display: flex;
+  color: white;
+  font-family: lato, helvetica;
+}
+
+#bar a {
+  font-size: 20px;
+  padding: 10px 0px 10px 25px;
+  transition: all .3s ease;
+}
+
+#bar a:hover {
+  color: var(--accent);
+  cursor: pointer;
+}
+
+#bar #current {
+  color: var(--accent);
+}
+
+#bar a:active {
+  color: var(--active) !important;
+}
+
+article {
+  display: grid;
+  grid-template-columns: 60px 0.3fr 50% 1fr 60px;
+  text-align: justify;
+}
+
+.navigate {
+  grid-row-start: span 900;
+  transition: all .3s ease;
+}
+
+.navigate:hover {
+  background-color: #eee;
+}
+
+.left {
+  grid-column: 1;
+}
+
+.right {
+  grid-column: 5;
+}
+
+article > * {
+  grid-column: 3;
+  min-width: 0;
+}
+
+article > textarea {
+  resize: none;
+  border: none;
+  outline: none;
+  grid-column: 4;
+  padding: 0 30px;
+  margin-top: 10px;
+  font-family: lato, helvetica;
+  color: var(--aside);
+  width: 2fr;
+  font-size: 14px;
+  overflow: scroll;
+}
+
+article header {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+article p {
+  margin-top: 10px;
+}
+
+article p a {
+  text-decoration: underline;
+  transition: all .2s ease;
+}
+
+article p a:hover {
+  color: var(--accent)
+}
+
+footer {
+  background-color: var(--main);
+  border-top: 4px solid var(--accent);
+  font-family: lato, helvetica;
+  color: white;
+  display: flex;
+}
+
+footer a {
+  width: 50%;
+  text-align: center;
+  padding: 10px;
+  transition: all .3s ease;
+}
+
+footer a:hover {
+  color: var(--accent);
+  cursor: pointer;
+}
+
+.note {
+  font-size: 14px;
+  color: var(--aside);
+}
